@@ -1,3 +1,41 @@
+#### add ####
+snippet # LogicComment
+	/*!                                                                                                 
+	* @brief   ${1}
+	* @author  ${2}
+	* @date    ${3}  
+	* ---------------------------------------------------------------------------------------------- */
+	${4}
+snippet # BlockComment
+	#--------------------------------------------------------------------------------
+	# ${1} 
+	#--------------------------------------------------------------------------------
+	${2}
+snippet # FunctionTitle
+	/*!                                                                                                 
+	* @brief    ${1} 
+	* @param    ${2} 
+	* @retval   ${3} 
+	* @author   ${4} 
+	* @date     ${5} 
+	* ---------------------------------------------------------------------------------------------- */
+snippet sq 
+	$sql  = " \n";
+	$sql .= " \n";
+	$sql .= " \n";
+	
+	$sql_config = array(
+		'query'   => $sql, 
+		'subject' => '', 
+		'log'     => true, 
+	);
+	$result = $this->DB->query($sql_config);
+	
+	$from_db[''] = array();
+	while ($items = @mysql_fetch_assoc($result)) {
+		$from_db[''][] = $items;
+	}
+#### /add ####
 snippet php
 	<?php
 	${1}
